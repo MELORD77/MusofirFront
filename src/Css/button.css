@@ -1,0 +1,84 @@
+/* CSS */
+/* .button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgb(96, 90, 3) 0%, rgb(219, 147, 14) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #b6880998;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+} */
+.button {
+  display: flex;
+  width: 128px;
+  height: 40px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 0;
+}
+/* .navbar-button {
+  color: var(--Gray-1, #e3dddd);
+  text-align: right;
+  font-family: Gilroy, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+} */
+.button1 {
+  background: none;
+  display: flex;
+  width: 228px;
+  height: 40px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 0;
+}
+.navbar-button1 {
+  color: var(--Gray-6, #f2f2f2);
+
+  /* Body text */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #a714a298 !important;
+  cursor: pointer;
+}
+.button1:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #a714a298 !important;
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: 0 0.3em 1em -0.5em #821af098 !important;
+}

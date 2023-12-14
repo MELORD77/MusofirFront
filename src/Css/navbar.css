@@ -1,0 +1,14 @@
+.Navbar-image {
+  background-color: rgba(91, 95, 255, 0.1) !important;
+  /* border-radius: 10px; */
+  box-shadow: #021e514d 0px 19px 38px, rgba(32, 14, 199, 0.22) 0px -15px 12px !important;
+  backdrop-filter: blur(5px);
+}
+.toolbar {
+  min-height: 8vh !important;
+}
+.navbar-container {
+  background-color: rgb(138, 130, 130, 0.5);
+  opacity: 0 - 1;
+  /* border-radius: 50px; */
+}

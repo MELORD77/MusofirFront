@@ -1,0 +1,8 @@
+.scroll-snap {
+  scroll-snap-type: y mandatory;
+}
+.scroll-stop {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  background: #000 !important;
+}

@@ -1,0 +1,412 @@
+.giftGrid :hover {
+  border-color: rgba(253, 214, 12, 1);
+  /* box-shadow: 0px 0px 20px 0px rgba(173, 158, 24, 0.7); */
+  cursor: pointer;
+  /* border-radius: 4px; */
+}
+
+.giftBox {
+  padding: 0;
+  /* margin: 8px 0px 8px 8px; */
+  position: relative;
+  width: 107px;
+  height: 170px;
+  border-radius: 8px;
+  border: 2px solid rgb(30, 41, 58);
+  box-shadow: 0px 0px 20px 0px rgba(237, 213, 0, 0.1);
+}
+.pointCount {
+  color: var(--Yellow-main, #fdd60c);
+  text-align: center;
+  font-family: Vipnagorgialla;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+.pointCountText {
+  color: var(--Yellow-main, #fdd60c);
+  text-align: center;
+  margin-top: 0;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.headerCard {
+  width: 90px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%);
+}
+.card-Header-Black {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 89%;
+  top: 0%;
+}
+.card-header-border {
+  width: 90%;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  transform: translate(-50%);
+}
+.card-Header-footer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 92%;
+  top: 0%;
+  margin: 0;
+}
+.cardContent {
+  margin: 0;
+  padding: 1px;
+  /* background: rgb(6, 37, 93); */
+  /* height: 99%; */
+  /* border-radius: 8px; */
+}
+.cardFooter {
+  margin: 0;
+  /* padding: 1px; */
+  margin-top: -31px;
+  /* background: rgba(25, 33, 48, 1); */
+  height: 40%;
+}
+.cardCenter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -2.5px;
+  width: 100%;
+}
+.cardRomp {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 9px;
+  /* width: 60%; */
+}
+.card-Button {
+  background-color: rgba(25, 33, 48, 1);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80px;
+  height: 19px;
+  margin-top: 40px;
+  border: 0;
+  border-radius: 10px;
+  /* width: 60%; */
+}
+.button-text {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header-text {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  top: 0px;
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 6.583px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1400px) {
+  .giftBox {
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    width: 65px;
+    height: 102px;
+    border-radius: 6px;
+    border: 2px solid rgb(30, 41, 58);
+    box-shadow: 0px 0px 20px 0px rgba(237, 213, 0, 0.1);
+  }
+
+  .headerCard {
+    width: 50px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%);
+  }
+  .card-header-border {
+    width: 90%;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translate(-50%);
+  }
+
+  .card-Header-Black {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85%;
+    top: 0%;
+  }
+  .card-Header-footer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 92%;
+    top: 0%;
+    margin: 0;
+  }
+  .header-text {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    top: 0px;
+    color: #fff;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 3.583px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .cardContent {
+    margin-top: -0.2px;
+    padding: 0px;
+    /* width: 99%; */
+    height: 80px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .image-content {
+    margin-top: -0px;
+
+    padding: 0px;
+    width: 64.5px;
+    /* height: 101%; */
+    border-radius: 5px;
+    z-index: -1;
+  }
+  .cardFooter {
+    margin: 0;
+    position: absolute;
+    border-radius: 15px;
+    bottom: 5px;
+    /* padding: 1px; */
+    /* margin-top: -29.5px; */
+    /* background: rgba(25, 33, 48, 1); */
+  }
+
+  .cardCenter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -3px;
+    width: 100%;
+  }
+  .cardRomp {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 2px;
+    width: 20%;
+  }
+  .card-Button {
+    background-color: rgba(25, 33, 48, 1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 45px;
+    height: 12px;
+    margin-top: 28px;
+    border: 0;
+    border-radius: 10px;
+    /* width: 60%; */
+  }
+  .button-text {
+    color: #fff;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 4.5px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .pointCount {
+    color: var(--Yellow-main, #fdd60c);
+    text-align: center;
+    font-family: Vipnagorgialla;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 2px;
+    margin-bottom: 0px;
+  }
+  .pointCountText {
+    color: var(--Yellow-main, #fdd60c);
+    text-align: center;
+    margin-top: 0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .giftBox {
+    margin: 0px 04px;
+    width: 54px;
+    height: 85px;
+    border: 1px solid rgb(30, 41, 58);
+    border-radius: 4px;
+    /* background: rgba(25, 35, 51, 1); */
+    /* position: absolute; */
+  }
+  .pointCount {
+    color: var(--Yellow-main, #fdd60c);
+    text-align: center;
+    font-family: Vipnagorgialla;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 2px;
+    margin-bottom: 0px;
+  }
+  .pointCountText {
+    color: var(--Yellow-main, #fdd60c);
+    text-align: center;
+    margin-top: 0;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .headerCard {
+    width: 80%;
+    height: 8px;
+    margin-top: -5px;
+  }
+
+  .card-Header-Black {
+    width: 88%;
+    margin-top: 5px;
+    /* z-index: 1; */
+    /* display: none; */
+  }
+  .card-header-border {
+    width: 95%;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: -1.5px;
+    transform: translate(-50%);
+  }
+  .header-text {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 65%;
+    transform: translate(-50%);
+    color: #fff;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 3px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .card-Header-footer {
+    width: 100%;
+    height: 21px;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    /* transform: translate(-50%); */
+  }
+
+  .cardContent {
+    height: 73%;
+    margin: 0;
+    padding: 0.5;
+    background: rgba(51, 65, 89, 1), rgba(25, 33, 48, 1);
+    border-radius: 2px;
+  }
+  .image-content {
+    margin-top: -0.2px;
+    padding: 0px;
+    width: 100%;
+    /* height: 97%; */
+    border-radius: 3.5px;
+    z-index: -1;
+  }
+
+  .cardFooter {
+    margin: 0;
+    position: absolute;
+    border-radius: 0px;
+    bottom: 4.5px;
+
+    /* display: none; */
+  }
+
+  .cardCenter {
+    margin-top: -4px;
+  }
+
+  .cardRomp {
+    margin-top: 4px;
+    width: 8px;
+  }
+
+  .card-Button {
+    width: 33px;
+    height: 7px;
+    margin-top: 20px;
+  }
+
+  .button-text {
+    color: #fff;
+    position: absolute;
+    top: -0%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 3px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}

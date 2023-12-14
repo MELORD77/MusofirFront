@@ -1,0 +1,74 @@
+.modal_block {
+  padding: 5%;
+  border-radius: 10px;
+}
+.modal_block h1 {
+  /* width: 60%; */
+  color: #fff;
+  text-align: center;
+  font-family: Vipnagorgialla;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 133.333% */
+}
+.modal_block p {
+  width: 100%;
+  /* padding: 16px 48px; */
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 36px; /* 150% */
+}
+.button {
+  display: flex;
+  font-family: Vipnagorgialla;
+  font-weight: bold;
+  width: 177px;
+  justify-content: center;
+  align-items: center;
+  color: var(--Gray-6, #f2f2f2);
+  border-radius: 8px;
+  background: var(--Primary-color, #432ad1);
+  border: 0;
+  text-decoration: none;
+}
+
+.button_outlined {
+  display: flex;
+  font-family: Vipnagorgialla;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-weight: bold;
+  width: 397px;
+  padding: 12px 48px;
+  justify-content: center;
+  align-items: center;
+  color: var(--Gray-6, #f2f2f2);
+  border-radius: 8px;
+  background: #0d013c;
+  border: 1px solid #fff;
+
+  text-decoration: none;
+}
+.offer_button_outlined {
+  display: flex;
+  font-family: Vipnagorgialla;
+  font-weight: bold;
+  width: 177px;
+  padding: 12px 48px;
+  justify-content: center;
+  align-items: center;
+  color: var(--Gray-6, #f2f2f2);
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background: var(--Primary-color, #0d013c);
+
+  text-decoration: none;
+}
