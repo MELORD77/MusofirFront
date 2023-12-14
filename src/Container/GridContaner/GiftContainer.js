@@ -3,14 +3,12 @@ import { Container, Grid } from "@mui/material";
 import ResponsiveGrid from "../ResponsiveGrid";
 import { motion } from "framer-motion";
 import "./style.css";
-import { useWindowSize } from "@uidotdev/usehooks";
 import imageBg from "../../images/Rectangle10.png";
 import ResponsiveAppBar from "../Navbar";
 import ContentTools from "./ContentTools";
 import GiftFooter from "./giftFooter";
 import SkeletonPage from "../../Components/Skeleton";
 import useImage from "react-use-image";
-// import cardImage from "../../images/Vector_png.png";
 import cardImage from "../../images/cardMoblie.svg";
 import useSound from "use-sound";
 import click_sound from "../../sounds/sound.wav";
@@ -23,13 +21,9 @@ let count = 0;
 export default function GiftContainer() {
   const [open, setOpen] = React.useState(true);
   const [openAttemptsNumber, setOpenAttemptsNumber] = React.useState(true);
-  const size = useWindowSize();
   const { loaded } = useImage(cardImage);
   const [numberAttempts, setNumberAttempts] = useState(3);
   const [play] = useSound(click_sound);
-  const mainHeight = size.height === null ? "92vh" : ` ${size.height - 160}px`;
-  const mainHeightLg =
-    size.height === null ? "80vh" : ` ${size.height - 760}px`;
   const [offerModalOpen, setOfferModalOpen] = React.useState(false);
   // const handleCloseBack = () => {
   //   setOfferModalOpen(false);
