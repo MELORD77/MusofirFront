@@ -14,8 +14,9 @@
 }
 
 .tools-button1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
   width: 180px;
-  background: none;
   display: inline-flex;
   padding: 6px 0px;
   justify-content: center;

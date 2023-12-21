@@ -4,7 +4,9 @@ import "./style.css";
 import CloseIcon from "@mui/icons-material/Close";
 import coinIcon from "../../images/icons8-coin-48.png";
 import CountUp from "react-countup";
+import { useNavigate } from "react-router-dom";
 export default function ContentTools({ totalCount }) {
+  const navigate = useNavigate();
   return (
     <>
       <Box
@@ -18,7 +20,12 @@ export default function ContentTools({ totalCount }) {
         }}
       >
         <Box>
-          <button className="tools-button1">
+          <button
+            className="tools-button1"
+            onClick={() => {
+              navigate("/main");
+            }}
+          >
             <CloseIcon sx={{ color: "#f2f2f2", ml: 0 }} />
             <Typography
               sx={{ display: { xs: "none", md: "block" } }}

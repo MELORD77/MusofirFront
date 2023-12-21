@@ -16,8 +16,9 @@ const MainPage = () => {
   const size = useWindowSize();
   const mainHeight = size.height === null ? "77vh" : ` ${size.height - 0}px`;
   const animationStyles = {
-    height: "92vh",
+    height: "91vh",
     margin: "auto",
+    marginBottom: "8px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -35,7 +36,6 @@ const MainPage = () => {
       </Box>
 
       <Box
-        // className={"scroll-stop"}
         sx={{
           height: mainHeight - 180,
         }}
