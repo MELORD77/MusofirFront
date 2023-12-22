@@ -12,9 +12,10 @@ export default function ContentTools({ totalCount }) {
       <Box
         sx={{
           width: "100%",
-          height: "50px",
+          height: { xs: "50px", md: "40px", lg: "90px" },
           display: "flex",
           px: 1,
+
           justifyContent: "space-between",
           alignItems: "center",
         }}

@@ -124,6 +124,7 @@
 /* Tablets and small desktops */
 @media only screen and (min-width: 601px) and (max-width: 1424px) {
   .tools-button1 {
+    color: #fdd60c;
     width: 150px;
   }
   .person {
@@ -132,11 +133,11 @@
     margin-top: -40px;
   }
   .toolsText {
-    font-size: 48px;
+    font-size: 24px;
   }
 
   .footer-text {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 

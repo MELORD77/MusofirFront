@@ -7,13 +7,14 @@ export default function GiftFooter({ numberAttempts }) {
   return (
     <>
       <Box
+        maxWidth={"xl"}
         sx={{
           width: "100%",
-          position: "fixed",
+          position: "absolute",
           bottom: "0px",
-          left: "0%",
-
-          height: { xs: "120px", md: "75px", lg: "130px" },
+          left: "50%",
+          transform: "translate(-50%)",
+          height: { xs: "120px", md: "75px", lg: "150px" },
           backgroundSize: "100% 110%",
           backgroundImage: `url(${imageBg})`,
           display: { xs: "flex", md: "flex" },
