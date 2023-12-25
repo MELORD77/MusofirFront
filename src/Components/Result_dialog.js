@@ -4,11 +4,12 @@ import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import "../Css/modalText.css";
 import { Box, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
-    // width: "70%",
+    width: { xs: "auto", md: "400px" },
     padding: theme.spacing(2),
     backgroundColor: "#09002F",
     color: "#fff",
@@ -20,15 +21,26 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-export default function ResultDialogs({ totalCount, open, setOpen }) {
+export default function ResultDialogs({
+  data,
+  setData,
+  totalCount,
+  open,
+  setOpen,
+  viewBroker,
+  setViewBroker,
+}) {
+  const navigate = useNavigate();
   const handleClose = () => {
     setOpen(false);
+    const updatedData = data.map((item) => (item.clicked = false));
+    setData(updatedData);
   };
 
   return (
     <React.Fragment>
       <BootstrapDialog
-        maxWidth={"lg"}
+        maxWidth={"xxl"}
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
@@ -38,15 +50,25 @@ export default function ResultDialogs({ totalCount, open, setOpen }) {
             <Stack spacing={2}>
               <div className="modal_block">
                 <h1>Поздравляем</h1>
-                <p>Вы выиграли {totalCount} баллов</p>
+                <p>Вы выиграли {!viewBroker ? totalCount : "100"} баллов</p>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                  <button onClick={handleClose} className="button">
-                    {" "}
-                    Начать игру
-                  </button>
+                  {/* {!viewBroker && (
+                    <button onClick={handleClose} className="button">
+                      {" "}
+                      Начать игру
+                    </button>
+                  )} */}
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
-                  <button className="offer_button_outlined">На главную</button>
+                  <button
+                    className="offer_button_outlined"
+                    onClick={() => {
+                      navigate("/main");
+                      setViewBroker(false);
+                    }}
+                  >
+                    На главную
+                  </button>
                 </Box>
               </div>
             </Stack>

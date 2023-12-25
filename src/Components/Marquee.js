@@ -6,7 +6,7 @@ export default function MarqueeComponent() {
   return (
     <Marquee autoFill>
       <Typography variant="h6" color={"#fff"}>
-        Easy-to-use animation library for React apps {"\u2728"}
+        BORIGA BARAKA{"\u2728"}
       </Typography>
     </Marquee>
   );

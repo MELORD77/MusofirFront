@@ -20,7 +20,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
   "& .MuiDialogContent-root": {
     // width: "70%",
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     backgroundColor: "#09002F",
     borderRadius: "0px",
     color: "#fff",
@@ -31,22 +31,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     color: "#fff",
   },
 }));
-const style = {
-  // position: "absolute",
-  // top: "50%",
-  // left: "50%",
-  // transform: "translate(-50%, -50%)",
-  // width: 80,
-  color: "gold",
-  boxShadow: 24,
-  // backgroundColor: "rgba(255, 255, 255, 0.1)",
-  backgroundColor: "red",
-  backdropFilter: "blur(1px)",
-  WebkitBackdropFilter: "blur(10px)",
-  // borderRadius: "10px",
-  border: "1px solid rgba(255, 255, 255, 0.1)",
-  p: 2,
-};
 
 export default function CustomizedDialogs({ open, setOpen }) {
   const handleClose = () => {

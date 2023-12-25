@@ -3,13 +3,14 @@ import "../Css/video.css";
 import "../Css/giftBox.css";
 import "../Css/scroll.css";
 import "../Css/cardBody.css";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { useWindowSize } from "@uidotdev/usehooks";
 import TitleAnimationText from "../Components/TitleAnimationText";
 import MarqueeComponent from "../Components/Marquee";
 import FooterComponent from "./FooterComponent";
 
 import { motion } from "framer-motion";
+import MainFooterText from "../Components/MainFooterText";
 const ResponsiveAppBar = React.lazy(() => import("./Navbar"));
 
 const MainPage = () => {
@@ -40,7 +41,7 @@ const MainPage = () => {
           height: mainHeight - 180,
         }}
       >
-        <TitleAnimationText />
+        <MainFooterText />
       </Box>
       <Box sx={{ m: 4, mt: 15 }}>
         <FooterComponent />

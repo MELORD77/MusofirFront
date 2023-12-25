@@ -11,9 +11,9 @@ export default function GiftFooter({ numberAttempts }) {
         sx={{
           width: "100%",
           position: "absolute",
-          bottom: "0px",
+          bottom: "25px",
           left: "50%",
-          transform: "translate(-50%)",
+          transform: "translate(-50% )",
           height: { xs: "120px", md: "75px", lg: "150px" },
           backgroundSize: "100% 110%",
           backgroundImage: `url(${imageBg})`,

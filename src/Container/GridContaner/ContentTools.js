@@ -15,7 +15,7 @@ export default function ContentTools({ totalCount }) {
           height: { xs: "50px", md: "40px", lg: "90px" },
           display: "flex",
           px: 1,
-
+          mb: 1,
           justifyContent: "space-between",
           alignItems: "center",
         }}

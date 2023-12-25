@@ -23,12 +23,8 @@ export default function SignInSide() {
       email: data.get("email"),
       password: data.get("password"),
     });
-    if (
-      data.get("email") === "Administrator" &&
-      data.get("password") === "67jjjMv5p4^w"
-    ) {
+    if (data.get("email") === "admin" && data.get("password") === "admin") {
       navigate("/main");
-      console.log("Adf");
     }
   };
 

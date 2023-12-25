@@ -38,6 +38,44 @@
   background: #fff;
   border: 0;
 }
+.buttonAgree {
+  display: flex;
+  width: 178px;
+  height: 40px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: rgba(253, 214, 12, 1);
+  border: 0;
+}
+@media only screen and (max-width: 601px) {
+  .buttonAgree {
+    display: flex;
+    width: 178px !important;
+    height: 40px !important;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: rgba(253, 214, 12, 1);
+    border: 0;
+  }
+  .button {
+    display: flex;
+    width: 178px !important;
+    height: 40px !important;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #fff;
+    border: 0;
+  }
+}
 /* .navbar-button {
   color: var(--Gray-1, #e3dddd);
   text-align: right;
@@ -67,10 +105,14 @@
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
 }
 .button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #a714a298 !important;
+  cursor: pointer;
+}
+.buttonAgree:hover {
   box-shadow: 0 0.5em 1.5em -0.5em #a714a298 !important;
   cursor: pointer;
 }

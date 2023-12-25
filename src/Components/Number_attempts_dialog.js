@@ -6,7 +6,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 80,
+  minWidth: "100px",
   color: "gold",
   boxShadow: 24,
   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -15,6 +15,8 @@ const style = {
   borderRadius: "10px",
   border: "1px solid rgba(255, 255, 255, 0.1)",
   p: 2,
+  display: "flex",
+  justifyContent: "center",
 };
 
 export default function NumberAttemptsDialog({

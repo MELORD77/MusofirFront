@@ -70,7 +70,7 @@
 .person {
   width: 120px;
   filter: drop-shadow(1px -1px 8px #e8d5738c);
-  margin-top: -40px;
+  margin-top: -80px;
 }
 
 /* Mobile devices */
@@ -118,6 +118,7 @@
   .person {
     width: 80px;
     filter: drop-shadow(1px -1px 8px #e8d5738c);
+    margin-top: -30px;
   }
 }
 
@@ -130,7 +131,7 @@
   .person {
     width: 70px;
     filter: drop-shadow(1px -1px 8px #e8d5738c);
-    margin-top: -40px;
+    /* margin-top: -50px; */
   }
   .toolsText {
     font-size: 24px;

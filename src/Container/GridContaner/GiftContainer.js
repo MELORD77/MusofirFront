@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Grid } from "@mui/material";
+import { Backdrop, Button, Container, Grid } from "@mui/material";
 import ResponsiveGrid from "../ResponsiveGrid";
 import { motion } from "framer-motion";
 import "./style.css";
@@ -9,30 +9,29 @@ import ContentTools from "./ContentTools";
 import GiftFooter from "./giftFooter";
 import SkeletonPage from "../../Components/Skeleton";
 import useImage from "react-use-image";
-import cardImage from "../../images/cardMoblie.svg";
+import cardImage from "../../images/ContentImage.png";
 import useSound from "use-sound";
 import click_sound from "../../sounds/sound.wav";
 import CustomizedDialogs from "../../Components/dialog_Component";
 import ResultDialog from "../../Components/Result_dialog";
 import NumberAttemptsDialog from "../../Components/Number_attempts_dialog";
+import BrokerOffer from "./BrokerOffer";
 
 let count = 0;
-
+let countBroker = 0;
 export default function GiftContainer() {
-  const [open, setOpen] = React.useState(true);
-  const [openAttemptsNumber, setOpenAttemptsNumber] = React.useState(true);
   const { loaded } = useImage(cardImage);
-  const [numberAttempts, setNumberAttempts] = useState(3);
   const [play] = useSound(click_sound);
+  const [open, setOpen] = React.useState(true);
+  const [numberAttempts, setNumberAttempts] = useState(3);
   const [offerModalOpen, setOfferModalOpen] = React.useState(false);
-  // const handleCloseBack = () => {
-  //   setOfferModalOpen(false);
-  // };
+  const [openAttemptsNumber, setOpenAttemptsNumber] = React.useState(true);
+
   const handleOpenBack = () => {
     // setOpenAttemptsNumber(true);
     // setOfferModalOpen(true);
   };
-
+  const [viewBroker, setViewBroker] = useState(false);
   const [data, setData] = React.useState([
     { id: 1, clicked: false, count: null },
     { id: 2, clicked: false, count: null },
@@ -85,12 +84,13 @@ export default function GiftContainer() {
   const handleClick = (id) => {
     // Find the clicked item by id
     const clickedItem = data.find((item) => item.id === id);
-
     count++;
-    console.log(numberAttempts);
-    console.log(count);
 
     if (count === numberAttempts) {
+      countBroker++;
+      if (countBroker % 2 === 0) {
+        setViewBroker(true);
+      }
       setOpenAttemptsNumber(true);
       setNumberAttempts(
         generateRandomClick(countClickedTrue() > 8 ? 8 : countClickedTrue())
@@ -118,16 +118,13 @@ export default function GiftContainer() {
     }
   };
 
+  // <Button onClick={handleOpen}>Show backdrop</Button>;
   useEffect(() => {
     const delay = 1000; // Delay in milliseconds
 
     const timer = setTimeout(() => {
-      // Code to execute after the delay
-      // setImageLoaded(true);
-
       setOpenAttemptsNumber(false);
       handleOpenBack();
-      console.log("Delayed function executed");
     }, delay);
 
     // Clean up the timer when the component unmounts or changes
@@ -146,8 +143,8 @@ export default function GiftContainer() {
       <Container
         maxWidth={"xl"}
         sx={{
-          px: { xs: 3, md: 10, lg: 10 },
-          pt: { xs: 2, md: 0, lg: 0 },
+          px: { xs: 0, md: 10, lg: 10 },
+          pt: { xs: 1, md: 0, lg: 0 },
           position: "relative",
           height: "92vh",
         }}
@@ -178,7 +175,19 @@ export default function GiftContainer() {
             )}
           </Grid>
         </Grid>
-        <GiftFooter numberAttempts={numberAttempts} />
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={viewBroker}
+          // onClick={handleClose}
+        >
+          <BrokerOffer
+            viewBroker={viewBroker}
+            setViewBroker={setViewBroker}
+            setOfferModalOpen={setOfferModalOpen}
+            totalCount={100}
+          />
+        </Backdrop>
+        {!viewBroker && <GiftFooter numberAttempts={numberAttempts} />}
 
         <NumberAttemptsDialog
           open={openAttemptsNumber}
@@ -187,6 +196,10 @@ export default function GiftContainer() {
         />
         <CustomizedDialogs open={open} setOpen={setOpen} />
         <ResultDialog
+          viewBroker={viewBroker}
+          setViewBroker={setViewBroker}
+          data={data}
+          setData={setData}
           totalCount={sumCounts()}
           open={offerModalOpen}
           setOpen={setOfferModalOpen}
