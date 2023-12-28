@@ -281,7 +281,7 @@
 
 @media screen and (max-width: 600px) {
   .giftBox {
-    margin: 0px 04px;
+    margin: 0px 4px;
     width: 54px;
     height: 85px;
     border: 1px solid rgb(30, 41, 58);
@@ -381,7 +381,7 @@
   }
 
   .cardCenter {
-    margin-top: -4px;
+    margin-top: -0.4rem;
   }
 
   .cardRomp {

@@ -3,7 +3,7 @@ import "../Css/video.css";
 import "../Css/giftBox.css";
 import "../Css/scroll.css";
 import "../Css/cardBody.css";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { useWindowSize } from "@uidotdev/usehooks";
 import TitleAnimationText from "../Components/TitleAnimationText";
 import MarqueeComponent from "../Components/Marquee";
@@ -18,7 +18,7 @@ const MainPage = () => {
   const mainHeight = size.height === null ? "77vh" : ` ${size.height - 0}px`;
   const animationStyles = {
     height: "91vh",
-    margin: "auto",
+
     marginBottom: "8px",
     display: "flex",
     alignItems: "center",
@@ -32,21 +32,28 @@ const MainPage = () => {
       exit={{ opacity: 0 }}
     >
       <ResponsiveAppBar />
-      <Box sx={animationStyles}>
-        <TitleAnimationText />
-      </Box>
-
-      <Box
-        sx={{
-          height: mainHeight - 180,
-        }}
-      >
-        <MainFooterText />
-      </Box>
-      <Box sx={{ m: 4, mt: 15 }}>
-        <FooterComponent />
-      </Box>
-      <MarqueeComponent />
+      <Grid container p={1} spacing={2}>
+        <Grid item xs={12}>
+          <Box sx={animationStyles}>
+            <TitleAnimationText />
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              height: mainHeight - 180,
+            }}
+          >
+            <MainFooterText />
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box sx={{ mt: 15 }}>
+            <FooterComponent />
+          </Box>
+        </Grid>
+        <MarqueeComponent />
+      </Grid>
     </motion.div>
   );
 };

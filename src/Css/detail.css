@@ -3,17 +3,18 @@
   max-width: 420px;
   border-radius: 20px;
   padding: 2px;
-  padding-inline-start: 15px;
+  /* padding-inline-start: 15px; */
 }
 
 .detail_box h1 {
-  color: #fff;
+  color: #fdc90c;
   text-align: center;
   font-family: Vipnagorgialla;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-shadow: 2px 3px 2px rgb(128, 70, 0);
 }
 
 .detail_box p {
@@ -56,17 +57,17 @@
     /* width: 100%; */
     border-radius: 20px;
     padding: 2px;
-    padding-inline-start: 15px;
+    /* padding-inline-start: 15px; */
   }
   .detail_box p {
     width: auto;
-    font-size: 12px;
+    font-size: 28px;
   }
 
   .button {
     width: 150px;
     height: 30px;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 

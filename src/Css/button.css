@@ -1,51 +1,27 @@
-/* CSS */
-/* .button-88 {
+.button_auth_navbar {
+  background: #ffffffb7;
   display: flex;
-  align-items: center;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 0.7em 1.4em 0.7em 1.1em;
-  color: white;
-  background: #ad5389;
-  background: linear-gradient(0deg, rgb(96, 90, 3) 0%, rgb(219, 147, 14) 100%);
-  border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #b6880998;
-  letter-spacing: 0.05em;
-  border-radius: 20em;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-88:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
-}
-
-.button-88:active {
-  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
-} */
-.button {
-  display: flex;
-  width: 128px;
+  width: 228px;
   height: 40px;
   padding: 16px 24px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-right: 20px;
   border-radius: 10px;
-  background: #fff;
-  border: 0;
+  border: 1px solid #50065f8c;
+  border: none;
+  box-shadow: 0 0.3em 1em -0.5em #821af098 !important;
 }
 .buttonAgree {
   display: flex;
-  width: 178px;
-  height: 40px;
-  padding: 16px 24px;
+  width: 185px;
+  height: 35px;
+  /* padding: 16px 24px; */
   justify-content: center;
   align-items: center;
   gap: 10px;
+  color: #090909;
   border-radius: 10px;
   background: rgba(253, 214, 12, 1);
   border: 0;
@@ -55,12 +31,13 @@
     display: flex;
     width: 178px !important;
     height: 40px !important;
-    padding: 16px 24px;
+    /* padding: 16px 24px; */
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: #090909 !important;
     border-radius: 10px;
-    background: rgba(253, 214, 12, 1);
+    background: var(--Yellow-main, #fdd60c);
     border: 0;
   }
   .button {
@@ -96,13 +73,14 @@
   gap: 10px;
   margin-right: 20px;
   border-radius: 10px;
-  border: 0;
+  border: 1px solid #50065f8c;
+  border: none;
+  box-shadow: 0 0.3em 1em -0.5em #821af098 !important;
 }
 .navbar-button1 {
   color: var(--Gray-6, #f2f2f2);
 
-  /* Body text */
-  font-family: Inter;
+  font-family: Montserrat-Bold !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;

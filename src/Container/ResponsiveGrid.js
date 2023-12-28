@@ -11,13 +11,10 @@ import romp from "../images/romp.svg";
 import { motion } from "framer-motion";
 
 export default function ResponsiveGrid({
-  open,
-  setOpen,
-  imageLoaded,
   data,
-  setData,
   cardImage,
   handleClick,
+  setLastPoint,
 }) {
   return (
     <>
@@ -42,6 +39,7 @@ export default function ResponsiveGrid({
             className="giftGrid"
             onClick={() => {
               handleClick(e.id);
+              setLastPoint(e.count);
             }}
           >
             {e.clicked ? (

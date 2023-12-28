@@ -3,7 +3,8 @@ import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import "../Css/modalText.css";
-import { Box, Stack } from "@mui/material";
+import "../Css/button.css";
+import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 
@@ -29,11 +30,12 @@ export default function ResultDialogs({
   setOpen,
   viewBroker,
   setViewBroker,
+  countClickedTrue,
 }) {
   const navigate = useNavigate();
   const handleClose = () => {
     setOpen(false);
-    const updatedData = data.map((item) => (item.clicked = false));
+    const updatedData = data?.map((item) => (item.clicked = false));
     setData(updatedData);
   };
 
@@ -50,7 +52,11 @@ export default function ResultDialogs({
             <Stack spacing={2}>
               <div className="modal_block">
                 <h1>Поздравляем</h1>
-                <p>Вы выиграли {!viewBroker ? totalCount : "100"} баллов</p>
+                <p>
+                  Вы выиграли{" "}
+                  {!viewBroker || !countClickedTrue() > 0 ? totalCount : "100"}{" "}
+                  баллов
+                </p>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   {/* {!viewBroker && (
                     <button onClick={handleClose} className="button">
@@ -61,13 +67,15 @@ export default function ResultDialogs({
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
                   <button
-                    className="offer_button_outlined"
+                    className="buttonAgree"
                     onClick={() => {
                       navigate("/main");
                       setViewBroker(false);
                     }}
                   >
-                    На главную
+                    <Typography sx={{ color: "#000!important" }}>
+                      На главную
+                    </Typography>
                   </button>
                 </Box>
               </div>

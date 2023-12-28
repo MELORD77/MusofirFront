@@ -14,6 +14,7 @@ export default function Footer() {
         }}
       >
         <Grid
+          item
           xs={12}
           md={4}
           display="flex"
@@ -29,8 +30,7 @@ export default function Footer() {
               allowFullScreen
               height={240}
               width={"100%"}
-              style={{ borderRadius: "20px" }}
-              frameborder="0"
+              style={{ borderRadius: "20px", border: 0 }}
             />
             <Typography
               color={"#fff"}
@@ -45,6 +45,7 @@ export default function Footer() {
           </div>
         </Grid>
         <Grid
+          item
           xs={12}
           md={4}
           display="flex"
@@ -60,8 +61,8 @@ export default function Footer() {
               allowFullScreen
               height={240}
               width={"100%"}
-              style={{ borderRadius: "20px" }}
-              frameborder="0"
+              style={{ borderRadius: "20px", border: 0 }}
+              // frameborder="0"
             />
             <Typography
               color={"#fff"}
@@ -76,6 +77,7 @@ export default function Footer() {
           </div>
         </Grid>
         <Grid
+          item
           xs={12}
           md={4}
           display="flex"
@@ -91,8 +93,7 @@ export default function Footer() {
               allowFullScreen
               height={240}
               width={"100%"}
-              style={{ borderRadius: "20px" }}
-              frameborder="0"
+              style={{ borderRadius: "20px", border: 0 }}
             />
             <Typography
               color={"#fff"}

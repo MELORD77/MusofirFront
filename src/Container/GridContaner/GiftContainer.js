@@ -26,7 +26,7 @@ export default function GiftContainer() {
   const [numberAttempts, setNumberAttempts] = useState(3);
   const [offerModalOpen, setOfferModalOpen] = React.useState(false);
   const [openAttemptsNumber, setOpenAttemptsNumber] = React.useState(true);
-
+  const [lastPoint, setLastPoint] = useState(0);
   const handleOpenBack = () => {
     // setOpenAttemptsNumber(true);
     // setOfferModalOpen(true);
@@ -71,7 +71,7 @@ export default function GiftContainer() {
 
   const countClickedTrue = () => {
     const clickedTrueCount = data.filter((item) => item.clicked).length;
-    return 24 - clickedTrueCount;
+    return 22 - clickedTrueCount;
   };
 
   const sumCounts = () => {
@@ -85,6 +85,7 @@ export default function GiftContainer() {
     // Find the clicked item by id
     const clickedItem = data.find((item) => item.id === id);
     count++;
+    setLastPoint(clickedItem.count);
 
     if (count === numberAttempts) {
       countBroker++;
@@ -92,9 +93,11 @@ export default function GiftContainer() {
         setViewBroker(true);
       }
       setOpenAttemptsNumber(true);
-      setNumberAttempts(
-        generateRandomClick(countClickedTrue() > 8 ? 8 : countClickedTrue())
-      );
+      countClickedTrue() > 2 &&
+        setNumberAttempts(
+          generateRandomClick(countClickedTrue() > 8 ? 6 : countClickedTrue())
+        );
+
       count = 0;
     }
     if (clickedItem && !clickedItem.clicked) {
@@ -110,18 +113,20 @@ export default function GiftContainer() {
       // Update the state with the new array
       setData(updatedData);
       sumCounts();
-      if (countClickedTrue() === 0) {
+      if (countClickedTrue() === -1) {
         setOpen(false);
-        setOfferModalOpen(true);
+        lastPoint > 0 && setOfferModalOpen(true);
       }
       play();
     }
   };
 
   // <Button onClick={handleOpen}>Show backdrop</Button>;
+  // <Button onClick={handleOpen}>Show backdrop</Button>;
   useEffect(() => {
     const delay = 1000; // Delay in milliseconds
-
+    viewBroker && setOpenAttemptsNumber(false);
+    !viewBroker && setOpenAttemptsNumber(true);
     const timer = setTimeout(() => {
       setOpenAttemptsNumber(false);
       handleOpenBack();
@@ -129,7 +134,7 @@ export default function GiftContainer() {
 
     // Clean up the timer when the component unmounts or changes
     return () => clearTimeout(timer);
-  }, [numberAttempts]);
+  }, [numberAttempts, viewBroker]);
   return (
     <motion.div
       style={{
@@ -162,6 +167,7 @@ export default function GiftContainer() {
                   handleClick={handleClick}
                   data={data}
                   setData={setData}
+                  setLastPoint={setLastPoint}
                 />
               </motion.div>
             ) : (
@@ -187,7 +193,12 @@ export default function GiftContainer() {
             totalCount={100}
           />
         </Backdrop>
-        {!viewBroker && <GiftFooter numberAttempts={numberAttempts} />}
+        {!viewBroker && (
+          <GiftFooter
+            numberAttempts={numberAttempts}
+            countClickedTrue={countClickedTrue}
+          />
+        )}
 
         <NumberAttemptsDialog
           open={openAttemptsNumber}
@@ -196,11 +207,12 @@ export default function GiftContainer() {
         />
         <CustomizedDialogs open={open} setOpen={setOpen} />
         <ResultDialog
+          countClickedTrue={countClickedTrue}
           viewBroker={viewBroker}
           setViewBroker={setViewBroker}
           data={data}
           setData={setData}
-          totalCount={sumCounts()}
+          totalCount={lastPoint}
           open={offerModalOpen}
           setOpen={setOfferModalOpen}
         />

@@ -6,7 +6,9 @@ import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import "../Css/modalText.css";
+import "../Css/detail.css";
 import { Box, Stack } from "@mui/material";
+import { useTranslation } from "react-i18next";
 // import { NavLink } from "react-router-dom";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -32,11 +34,11 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-export default function CustomizedDialogs({ open, setOpen }) {
+export default function CustomizedDialogs({ open = true, setOpen }) {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const { t } = useTranslation();
   return (
     <>
       <BootstrapDialog
@@ -60,20 +62,20 @@ export default function CustomizedDialogs({ open, setOpen }) {
           <Box sx={{ width: "100%" }}>
             <Stack spacing={2}>
               <div className="modal_block">
-                <h1>Добро пожаловать в игру Boriga Baraka</h1>
+                <h1>{t("Добро пожаловать в игру Boriga Baraka")}</h1>
                 <p>
-                  Обманчиво простая, невероятно интересная игра. Где каждый
-                  может выиграть.
+                  {t(
+                    "Обманчиво простая, невероятно интересная игра. Где каждый может выиграть."
+                  )}
                 </p>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <button onClick={handleClose} className="button">
-                    {" "}
-                    Начать игру
+                    {t("Начать игру")}
                   </button>
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
                   <button className="button_outlined">
-                    Ознакомиться с правилами
+                    {t("Ознакомиться с правилами")}
                   </button>
                 </Box>
               </div>

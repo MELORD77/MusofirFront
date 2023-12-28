@@ -18,20 +18,26 @@ export default function BrokerOffer({
         sx={{
           width: "100%",
           position: "absolute",
-          bottom: "25px",
+          bottom: { xs: "25px", md: "5px", lg: "10px", xl: "25px" },
           left: "50%",
           transform: "translate(-50% )",
-          height: { xs: "150px", md: "75px", lg: "150px" },
+          height: { xs: "120px", md: "75px", lg: "100px", xl: "150px" },
           backgroundSize: "100% 110%",
           backgroundImage: `url(${imageBg})`,
-          display: { xs: "block", md: "flex" },
+          display: { xs: "flex", md: "flex" },
           px: 0,
-          mt: 0,
+          mt: 4,
           justifyContent: "space-around",
           alignItems: "center",
         }}
       >
-        <Grid container spacing={{ xs: 0, md: 0 }} mx={1}>
+        <Grid
+          container
+          spacing={{ xs: 0, md: 0 }}
+          mx={1}
+          mb={1}
+          sx={{ position: "relative" }}
+        >
           <Grid item>
             <Grid container spacing={{ xs: 0, md: 0 }} mx={0}>
               <Grid item xs={12}>
@@ -60,9 +66,7 @@ export default function BrokerOffer({
                     setOfferModalOpen(true);
                   }}
                 >
-                  <Typography className="navbar-button">
-                    Забрать приз
-                  </Typography>
+                  <Typography className="buttonAgree">Забрать приз</Typography>
                 </button>
               </Grid>
             </Grid>

@@ -25,6 +25,7 @@ export default function SignInSide() {
     });
     if (data.get("email") === "admin" && data.get("password") === "admin") {
       navigate("/main");
+      localStorage.setItem("lang", "ru");
     }
   };
 

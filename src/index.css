@@ -48,10 +48,10 @@ body {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.136) 100%
+        rgba(0, 0, 0, 0.08) 100%
       ),
       url(./images/mainBgMobile1.png),
-      rgba(14, 14, 14, 0.606) 50% / cover no-repeat;
+      rgba(14, 14, 14, 0.236) 60% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
   }
